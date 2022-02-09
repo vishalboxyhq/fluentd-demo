@@ -1,5 +1,8 @@
 # Fluentd Docker Demo
 
+> Input: HTTP endpoint http://127.0.0.1:9880/sample.test
+> Output: MongoDB
+
 ## Install
 
 ```bash
