@@ -1,0 +1,22 @@
+version: "3"
+
+networks:
+  hermes:
+
+services:
+  fluentd:
+    build: ./
+    volumes:
+      - ./fluentd/conf:/fluentd/etc
+    ports:
+      - "9880:9880"
+    networks:
+      - hermes
+
+  mongodb:
+    image: mongo:4.4.10
+    ports:
+      - "27017:27017"
+    restart: always
+    networks:
+      - hermes
